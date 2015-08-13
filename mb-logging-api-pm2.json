@@ -1,0 +1,24 @@
+{
+  "name"             : "mb-logging-api-server",
+  "cwd"              : "/var/www/mb-logging-api",
+  "script"           : "mb-logging-api-server.js",
+  "node_args"        : ["--harmony", " --max-stack-size=102400000"],
+  "log_date_format"  : "YYYY-MM-DD HH:mm Z",
+  "error_file"       : "/var/log/mb-logging-api-server/mb-logging-api-server.stderr.log",
+  "instances"        : 6,
+  "min_uptime"       : "200s",
+  "max_restarts"     : 10,
+  "max_memory_restart": "1M",
+  "cron_restart"     : "1 0 * * *",
+  "watch"            : true,
+  "ignore_watch"      : ["[\\/\\\\]\\./", "node_modules"],
+  "merge_logs"       : true,
+  "exec_interpreter" : "node",
+  "exec_mode"        : "cluster",
+  "instances"        : 0,
+  "autorestart"      : true,
+  "vizion"           : false,
+  "env": {
+    "NODE_ENV": "production"
+  }
+}

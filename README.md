@@ -46,5 +46,7 @@ $ export NODE_ENV=<production | development>
 
 ##### Start as Deamon
 ```
-$ NODE_ENV=<production | development> forever start mb-logging-api-server.js
+$ PORT=4733 NODE_ENV=<production | development> forever start mb-logging-api-server.js
+or
+$ pm2 start mb-logging-api-pm2.json
 ```
